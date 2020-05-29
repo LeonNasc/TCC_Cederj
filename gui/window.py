@@ -1,16 +1,17 @@
 import sys
-from PyQt4 import QtGui
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from . import gui_main as gui
 
-def window():
-   app = QtGui.QApplication(sys.argv)
-   w = QtGui.QWidget()
-   b = QtGui.QLabel(w)
-   b.setText("Hello World!")
-   w.setGeometry(100,100,200,50)
-   b.move(50,20)
-   w.setWindowTitle("PyQt")
-   w.show()
-   sys.exit(app.exec_())
-	
-if __name__ == '__main__':
-   window()
+class GUI(gui.Ui_GUI):
+
+    def __init__(self):
+        app = QApplication(sys.argv)
+        self._window = QMainWindow()
+        self._instance = gui.Ui_GUI()
+        self._instance.setupUi(self._window)
+        self._window.show()
+        sys.exit(app.exec_())
+
+
+    if __name__ == '__main__':
+        window()

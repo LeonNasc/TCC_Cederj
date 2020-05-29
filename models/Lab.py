@@ -38,7 +38,7 @@ class Lab(identificavel.identificavel):
         pass
 
     def get_epis(self):
-        retun self.__epis.copy()
+        return self.__epis.copy()
 
     '''
         Método utilizado quando um usuário registra uma leitura de EPIs

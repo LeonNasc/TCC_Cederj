@@ -4,18 +4,17 @@ from models.Risco import Risco
 from models.Protecao import TipoProtecao
 from models.EPI import EPI
 from models.Lab import Lab
-from gui import window 
+from gui import window
 
 
 def criar_dados():
 
-    ''' 
+    '''
         Riscos
     '''
     # Físicos
     ruido = Risco("Ruído", "FIS", 2, 5)
-    radiacao = Risco("Radiação", "FIS", 2, 1)
-
+    radiacao = Risco("Radiação", "FIS", 2, 1) 
     # Quimicos
     poeiras = Risco("Poeira", "QUI", 2, 2)
     quims = Risco("Produtos Químicos", "QUI",4, 1)
@@ -66,7 +65,7 @@ def criar_dados():
 def criar_lab():
     criar_dados()
     #print(models.EPI("Óculos de proteção","teste", models.Modelo("teste", ".")))
-    window.window()
+    window_ = window.GUI()
 
 
 criar_lab()

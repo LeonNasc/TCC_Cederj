@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GUI</class>
+ <widget class="QMainWindow" name="GUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>634</width>
+    <height>524</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>EPI Check</string>
+  </property>
+  <property name="locale">
+   <locale language="Portuguese" country="Brazil"/>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>391</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Iniciar Leitura</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>391</width>
+      <height>371</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>20</y>
+      <width>20</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>391</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>120</y>
+      <width>181</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>EPIs requeridos</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>150</y>
+      <width>201</width>
+      <height>241</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>30</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Laboratório:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>50</y>
+      <width>201</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>634</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAvan_ado">
+    <property name="title">
+     <string>Configurações do laboratório</string>
+    </property>
+    <widget class="QMenu" name="menuEditar_Laborat_rio">
+     <property name="title">
+      <string>Editar Laboratório</string>
+     </property>
+     <addaction name="actionAlterar_nome"/>
+     <addaction name="actionAlterar_descri_ao"/>
+     <addaction name="separator"/>
+     <addaction name="actionOrdenar_EPIs_2"/>
+     <addaction name="actionIncluir_EPIs"/>
+     <addaction name="actionRemover_EPIs_2"/>
+     <addaction name="separator"/>
+     <addaction name="actionIncluir_risco"/>
+     <addaction name="actionRemover_risco"/>
+    </widget>
+    <widget class="QMenu" name="menuCadastro_de_EPIs">
+     <property name="title">
+      <string>Cadastro de EPIs</string>
+     </property>
+     <addaction name="actionAdicionar_EPI"/>
+     <addaction name="actionRemover_EPI"/>
+     <addaction name="actionAdicionar_novo_tipo_de_prote_ao"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="menuCadastro_de_EPIs"/>
+    <addaction name="actionVer_relat_rios"/>
+    <addaction name="separator"/>
+    <addaction name="actionAdicionar_laborat_rio"/>
+    <addaction name="menuEditar_Laborat_rio"/>
+   </widget>
+   <widget class="QMenu" name="menuBem_vindo">
+    <property name="title">
+     <string>Bem vindo</string>
+    </property>
+    <addaction name="actionSobre_o_laborat_rio"/>
+   </widget>
+   <widget class="QMenu" name="menuAvaliar_EPIs">
+    <property name="title">
+     <string>Avaliar EPIs</string>
+    </property>
+    <addaction name="actionIniciar_leitura"/>
+    <addaction name="actionVer_ltima_leitura"/>
+   </widget>
+   <addaction name="menuBem_vindo"/>
+   <addaction name="menuAvaliar_EPIs"/>
+   <addaction name="menuAvan_ado"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionRemover_EPIs">
+   <property name="text">
+    <string>Remover EPIs</string>
+   </property>
+  </action>
+  <action name="actionOrdenar_EPIs">
+   <property name="text">
+    <string>Ordenar EPIs</string>
+   </property>
+  </action>
+  <action name="actionVer_relat_rios">
+   <property name="text">
+    <string>Ver relatórios</string>
+   </property>
+  </action>
+  <action name="actionSobre_o_laborat_rio">
+   <property name="text">
+    <string>Sobre o laboratório</string>
+   </property>
+  </action>
+  <action name="actionIniciar_leitura">
+   <property name="text">
+    <string>Iniciar leitura</string>
+   </property>
+  </action>
+  <action name="actionVer_ltima_leitura">
+   <property name="text">
+    <string>Ver última leitura</string>
+   </property>
+  </action>
+  <action name="actionAdicionar_laborat_rio">
+   <property name="text">
+    <string>Adicionar laboratório</string>
+   </property>
+  </action>
+  <action name="actionAlterar_laborat_rio">
+   <property name="text">
+    <string>Alterar laboratório</string>
+   </property>
+  </action>
+  <action name="actionAlterar_EPIs">
+   <property name="text">
+    <string>Alterar EPIs</string>
+   </property>
+  </action>
+  <action name="actionAlterar_Riscos">
+   <property name="text">
+    <string>Alterar Riscos</string>
+   </property>
+  </action>
+  <action name="actionAlterar_descri_ao">
+   <property name="text">
+    <string>Alterar descriçao</string>
+   </property>
+  </action>
+  <action name="actionAlterar_nome">
+   <property name="text">
+    <string>Alterar nome</string>
+   </property>
+  </action>
+  <action name="actionAdicionar_EPI">
+   <property name="text">
+    <string>Adicionar EPI</string>
+   </property>
+  </action>
+  <action name="actionRemover_EPI">
+   <property name="text">
+    <string>Remover EPI</string>
+   </property>
+  </action>
+  <action name="actionAdicionar_novo_tipo_de_prote_ao">
+   <property name="text">
+    <string>Adicionar novo tipo de proteçao</string>
+   </property>
+  </action>
+  <action name="actionOrdenar_EPIs_2">
+   <property name="text">
+    <string>Ordenar EPIs</string>
+   </property>
+  </action>
+  <action name="actionIncluir_EPIs">
+   <property name="text">
+    <string>Incluir EPIs</string>
+   </property>
+  </action>
+  <action name="actionRemover_EPIs_2">
+   <property name="text">
+    <string>Remover EPIs</string>
+   </property>
+  </action>
+  <action name="actionIncluir_risco">
+   <property name="text">
+    <string>Incluir risco</string>
+   </property>
+  </action>
+  <action name="actionRemover_risco">
+   <property name="text">
+    <string>Remover risco</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
