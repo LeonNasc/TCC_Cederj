@@ -9,6 +9,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_GUI(object):
+
     def setupUi(self, GUI):
         GUI.setObjectName("GUI")
         GUI.resize(634, 524)
@@ -21,34 +22,49 @@ class Ui_GUI(object):
         GUI.setTabShape(QtWidgets.QTabWidget.Rounded)
         self.centralwidget = QtWidgets.QWidget(GUI)
         self.centralwidget.setObjectName("centralwidget")
+
+        #Botão de iniciar leitura
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(10, 430, 391, 27))
         self.pushButton.setObjectName("pushButton")
-        self.graphicsView = QtWidgets.QGraphicsView(self.centralwidget)
+
+        # Tela da câmera
+        self.graphicsView = QtWidgets.QLabel(self.centralwidget)
         self.graphicsView.setGeometry(QtCore.QRect(10, 20, 391, 371))
         self.graphicsView.setObjectName("graphicsView")
+
+        #Separador
         self.line = QtWidgets.QFrame(self.centralwidget)
         self.line.setGeometry(QtCore.QRect(400, 20, 20, 451))
         self.line.setFrameShape(QtWidgets.QFrame.VLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
+
+        #Barra de progresso para leitura
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
         self.progressBar.setGeometry(QtCore.QRect(10, 400, 391, 23))
-        self.progressBar.setProperty("value", 24)
+        self.progressBar.setProperty("value", 0)
         self.progressBar.setObjectName("progressBar")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(420, 120, 181, 17))
         self.label.setObjectName("label")
+
+        #Lista de EPIs por Lab
         self.listWidget = QtWidgets.QListWidget(self.centralwidget)
         self.listWidget.setGeometry(QtCore.QRect(420, 150, 201, 241))
         self.listWidget.setObjectName("listWidget")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(420, 30, 91, 17))
         self.label_2.setObjectName("label_2")
+
+        #Lista de labs
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox.setGeometry(QtCore.QRect(420, 50, 201, 25))
         self.comboBox.setObjectName("comboBox")
         GUI.setCentralWidget(self.centralwidget)
+
+
+        #Menus
         self.menubar = QtWidgets.QMenuBar(GUI)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 634, 22))
         self.menubar.setObjectName("menubar")
@@ -66,6 +82,9 @@ class Ui_GUI(object):
         self.statusbar = QtWidgets.QStatusBar(GUI)
         self.statusbar.setObjectName("statusbar")
         GUI.setStatusBar(self.statusbar)
+
+
+        #Ações dos menus
         self.actionRemover_EPIs = QtWidgets.QAction(GUI)
         self.actionRemover_EPIs.setObjectName("actionRemover_EPIs")
         self.actionOrdenar_EPIs = QtWidgets.QAction(GUI)
@@ -74,10 +93,16 @@ class Ui_GUI(object):
         self.actionVer_relat_rios.setObjectName("actionVer_relat_rios")
         self.actionSobre_o_laborat_rio = QtWidgets.QAction(GUI)
         self.actionSobre_o_laborat_rio.setObjectName("actionSobre_o_laborat_rio")
+
+        #Iniciar Leitura
         self.actionIniciar_leitura = QtWidgets.QAction(GUI)
         self.actionIniciar_leitura.setObjectName("actionIniciar_leitura")
+
+        #Ver ultima leitura
         self.actionVer_ltima_leitura = QtWidgets.QAction(GUI)
         self.actionVer_ltima_leitura.setObjectName("actionVer_ltima_leitura")
+
+        #Adicionar Laboratório
         self.actionAdicionar_laborat_rio = QtWidgets.QAction(GUI)
         self.actionAdicionar_laborat_rio.setObjectName("actionAdicionar_laborat_rio")
         self.actionAlterar_laborat_rio = QtWidgets.QAction(GUI)
@@ -165,3 +190,5 @@ class Ui_GUI(object):
         self.actionRemover_EPIs_2.setText(_translate("GUI", "Remover EPIs"))
         self.actionIncluir_risco.setText(_translate("GUI", "Incluir risco"))
         self.actionRemover_risco.setText(_translate("GUI", "Remover risco"))
+
+
