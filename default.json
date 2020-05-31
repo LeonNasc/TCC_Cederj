@@ -1,0 +1,49 @@
+{
+	"riscos": [
+		{
+			"nome": "Frio",
+			"classificao": "FIS",
+			"dano": 3,
+			"recorrencia": 3
+		},
+		{
+			"nome": "Calor",
+			"classificao": "FIS",
+			"dano": 3,
+			"recorrencia": 3
+		},
+		{
+			"nome": "Vírus",
+			"classificao": "BIO",
+			"dano": 5,
+			"recorrencia": 2
+		},	
+	],
+	"tiposProtecao": [
+		{
+		
+		},
+		{
+		
+		},
+	],
+	"EPIs":[
+		{
+		
+		
+		},
+		{
+		
+		
+		}	
+	],
+	"Labs":[
+		{
+			
+		
+		}
+	],
+	"Avaliações":[
+	
+	],
+}

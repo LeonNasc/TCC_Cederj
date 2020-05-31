@@ -7,38 +7,69 @@ import numpy as np
 
 class GUI(gui.Ui_GUI):
 
-    def __init__(self):
+    def __init__(self, labs=[{"nome":"Laboratório Padrão"}]):
         app = QApplication(sys.argv)
+        self._labs = labs
 
         #Inicia uma câmera
         self._cap = cv2.VideoCapture(0)
 
         #Inicia o widget
         self.inicializar_ui()
-
         sys.exit(app.exec_())
-
 
     def inicializar_bindings(self, ui):
         ui.pushButton.clicked.connect(self.realizarAvaliacao)
+        ui.actionVer_relat_rios.triggered.connect(self.lancar_menu_TODO)
+        ui.comboBox.activated.connect(self.alterar_lab)
+        ui.actionIniciar_leitura.triggered.connect(self.realizarAvaliacao)
+       # ui.menuEditar_Laborat_rio.clicked.connect(self.lancar_menu_TODO)
 
     def inicializar_ui(self):
         self._window = QMainWindow()
         self._instance = gui.Ui_GUI()
         self._instance.setupUi(self._window)
-        self.inicializar_bindings(self._instance)
+        self.carregar_dados(self._labs)
         self._window.show()
 
-    def realizarAvaliacao(self, feed):
+    def carregar_dados(self,dados):
+        #Lista de laboratórios
+        for index,lab in enumerate(dados):
+            self._instance.comboBox.insertItem(index, lab.get_nome())
+
+        for index, EPI in enumerate(dados[0].get_epis()):
+            self._instance.listWidget.insertItem(index,EPI.get_nome())
+
+        self.inicializar_bindings(self._instance)
+
+    def alterar_lab(self, lab):
+        # Definir lab como modelo de referência
+        self._curr_lab = lab
+
+        # Exibir nova lista
+        self._instance.listWidget.clear() #Limpa lista anterior e coloca nova
+        for index, EPI in enumerate(self._labs[lab].get_epis()):
+            self._instance.listWidget.insertItem(index,EPI.get_nome())
+
+        return
+
+    def lancar_menu_TODO(self):
+       print("TODO!")
+       dlg = QtGui.QDialog(self)
+       dlg.setWindowTitle("TODO!")
+       dlg.exec_()
+
+    def realizarAvaliacao(self):
         print("Iniciando Avaliação")
         for n in range(0,101):
-            import time
             image = self.converter_imagem(self._cap)
+            import time
             self._instance.graphicsView.setPixmap(QtGui.QPixmap(image))
             time.sleep(.05)
             self._instance.progressBar.setProperty("value", n)
 
         print("Avaliação concluída!")
+
 
 
     def converter_imagem(self, cap):

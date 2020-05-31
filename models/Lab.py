@@ -3,6 +3,7 @@ from . import identificavel
 class Lab(identificavel.identificavel):
 
     def __init__(self, nome, descricao, riscos=set(), EPI=set()):
+        super().__init__(nome,descricao)
         self.__nome = nome
         self.__descricao = descricao
         self.__riscos = riscos

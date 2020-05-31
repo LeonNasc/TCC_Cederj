@@ -3,10 +3,10 @@ from . import identificavel
 class EPI(identificavel.identificavel):
 
     def __init__(self, nome, tipo, modelo):
+        super().__init__(nome,nome)
         self.__nome = nome
         self.__tipo = tipo
         self.__modelo = modelo
-        super()
         print("Modelo do EPI - %s carregado!"% nome)
 
     def atualizar_modelo(self, modelo):

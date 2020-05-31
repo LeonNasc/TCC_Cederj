@@ -61,6 +61,7 @@ class Ui_GUI(object):
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox.setGeometry(QtCore.QRect(420, 50, 201, 25))
         self.comboBox.setObjectName("comboBox")
+        self.comboBox.setItemText(1,"Laboratório 1")
         GUI.setCentralWidget(self.centralwidget)
 
 
