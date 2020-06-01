@@ -1,11 +1,12 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog
 from PyQt5 import QtGui
-from . import gui_main as gui
+from . import gui_main as gui_main
+from . import lab_gui as lab_gui
 import cv2
 import numpy as np
 
-class GUI(gui.Ui_GUI):
+class GUI(gui_main.Ui_GUI):
 
     def __init__(self, labs=[{"nome":"Laboratório Padrão"}]):
         app = QApplication(sys.argv)
@@ -20,14 +21,14 @@ class GUI(gui.Ui_GUI):
 
     def inicializar_bindings(self, ui):
         ui.pushButton.clicked.connect(self.realizarAvaliacao)
-        ui.actionVer_relat_rios.triggered.connect(self.lancar_menu_TODO)
+        #ui.actionVer_relat_rios.triggered.connect(self.lancar_menu_TODO)
         ui.comboBox.activated.connect(self.alterar_lab)
         ui.actionIniciar_leitura.triggered.connect(self.realizarAvaliacao)
-       # ui.menuEditar_Laborat_rio.clicked.connect(self.lancar_menu_TODO)
+        ui.actionAdicionar_laborat_rio.triggered.connect(self.exibir_laboratorio)
 
     def inicializar_ui(self):
         self._window = QMainWindow()
-        self._instance = gui.Ui_GUI()
+        self._instance = gui_main.Ui_GUI()
         self._instance.setupUi(self._window)
         self.carregar_dados(self._labs)
         self._window.show()
@@ -53,10 +54,12 @@ class GUI(gui.Ui_GUI):
 
         return
 
-    def lancar_menu_TODO(self):
+    def exibir_laboratorio(self):
        print("TODO!")
-       dlg = QtGui.QDialog(self)
-       dlg.setWindowTitle("TODO!")
+       dlg = QDialog()
+       dialog = lab_gui.Ui_Dialog()
+       dialog.setupUi(dlg)
+       dlg.setWindowTitle("EPI Check - Adicionar Laboratório")
        dlg.exec_()
 
     def realizarAvaliacao(self):
