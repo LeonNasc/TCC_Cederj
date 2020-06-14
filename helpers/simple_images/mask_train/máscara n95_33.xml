@@ -1,0 +1,26 @@
+<annotation>
+	<folder>facemask on person</folder>
+	<filename>máscara n95_33.jpg</filename>
+	<path>/Users/leon/Dev/TCC_Cederj/helpers/simple_images/facemask on person/máscara n95_33.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>500</width>
+		<height>436</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mask</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>178</xmin>
+			<ymin>157</ymin>
+			<xmax>334</xmax>
+			<ymax>275</ymax>
+		</bndbox>
+	</object>
+</annotation>

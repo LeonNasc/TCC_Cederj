@@ -1,0 +1,40 @@
+filename,width,height,class,xmin,ymin,xmax,ymax
+facemask on person_89.jpg,1300,1065,mask,532,479,1137,963
+facemask on person_88.jpg,940,627,mask,535,235,823,454
+facemask on person_98.jpg,480,480,mask,136,280,347,427
+facemask on person_99.jpg,600,600,mask,212,250,373,384
+máscara n95_78.jpg,900,900,mask,289,430,789,758
+máscara n95_93.jpg,1200,900,mask,293,268,871,736
+facemask on person_6.jpg,1300,1065,mask,545,468,1138,964
+facemask on person_7.jpg,1600,1289,mask,141,475,873,1115
+facemask on person_5.jpg,940,627,mask,552,215,817,454
+facemask on person_4.jpg,1300,906,mask,459,356,820,653
+máscara n95_91.jpg,750,742,mask,254,288,572,531
+máscara n95_57.jpg,750,750,mask,465,528,613,666
+facemask on person_100.jpg,1300,867,mask,492,456,792,667
+facemask on person_3.jpg,1300,866,mask,394,367,1054,851
+facemask on person_2.jpg,1000,663,mask,611,267,1000,659
+máscara n95_97.jpg,800,800,mask,71,309,448,639
+máscara n95_59.jpg,650,816,mask,264,289,581,570
+máscara n95_99.jpg,960,960,mask,339,408,673,723
+máscara n95_98.jpg,148,207,mask,63,82,135,162
+máscara n95_77.jpg,890,659,mask,617,72,861,278
+máscara n95_77.jpg,890,659,mask,29,436,270,602
+máscara n95_63.jpg,730,383,mask,417,112,524,205
+facemask on person_9.jpg,620,330,mask,111,129,542,330
+facemask on person_8.jpg,1024,683,mask,482,234,721,491
+máscara n95_60.jpg,550,550,mask,198,250,357,359
+facemask on person_94.jpg,420,219,mask,160,103,237,157
+facemask on person_81.jpg,960,499,mask,425,166,547,275
+facemask on person_83.jpg,1280,720,mask,541,195,729,328
+facemask on person_97.jpg,590,350,mask,305,164,410,301
+facemask on person_96.jpg,480,385,mask,65,116,162,179
+facemask on person_96.jpg,480,385,mask,297,125,391,195
+facemask on person_82.jpg,600,415,mask,162,170,247,226
+facemask on person_86.jpg,1300,866,mask,409,387,1068,866
+facemask on person_92.jpg,620,330,mask,113,134,536,330
+facemask on person_93.jpg,320,216,mask,178,54,248,128
+facemask on person_87.jpg,1300,906,mask,452,365,820,653
+facemask on person_91.jpg,1024,683,mask,485,241,682,469
+facemask on person_85.jpg,1000,663,mask,593,269,996,663
+facemask on person_90.jpg,1600,1289,mask,147,489,885,1147
